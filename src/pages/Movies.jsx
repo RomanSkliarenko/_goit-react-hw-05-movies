@@ -38,7 +38,7 @@ function Movies() {
       setFilmsByQuery(data);
     });
     setSearchQuery(searchURLQuery)
-  }, []);
+  }, [searchURLQuery]);
 
 
   return (
