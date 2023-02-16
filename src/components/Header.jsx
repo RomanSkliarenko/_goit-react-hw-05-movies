@@ -2,7 +2,7 @@ import React from 'react';
 import NavLinkComponent from '../helpers/NavLinkComponent';
 
 
-function Header(props) {
+function Header() {
   return (
       <ul className='header-navigation'>
         <li>

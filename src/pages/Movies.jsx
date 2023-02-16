@@ -19,16 +19,9 @@ function Movies() {
       Notiflix.Notify.warning('Enter film name');
     }
     setSearchParams({ searchQuery });
-    fetchService.fetchFilmsByName(searchQuery).then(data => {
-      setFilmsByQuery(data);
-      if (data.length < 1){
-        Notiflix.Notify.warning(`our service knows nothing about the movie with the title "${searchQuery}"`);
-
-      }
-    }).catch((err)=>{
-      Notiflix.Notify.warning(`${err}`);
-
-    });
+    if (setFilmsByQuery.length < 1){
+      Notiflix.Notify.warning(`our service knows nothing about the movie with the title "${searchQuery}"`);
+    }
   };
   const changeSearchQueryHandler = (e) => {
     setSearchQuery(e.target.value);

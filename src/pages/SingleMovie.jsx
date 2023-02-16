@@ -32,11 +32,10 @@ function SingleMovie(props) {
            alt={film?.title || film?.original_name || film?.original_title} />
       {film && <h2>{film?.title || film?.original_name || film?.original_title}</h2>}
       <div className='film-navigation-button-wrapper'>
-        {<NavLinkComponent to={`/movies/${movieId}/cast`} from={location.state?.from ?? '/'}>Cast</NavLinkComponent>}
-        {<NavLinkComponent to={`/movies/${movieId}/review`}
+        {<NavLinkComponent to={`cast`} from={location.state?.from ?? '/'}>Cast</NavLinkComponent>}
+        {<NavLinkComponent to={`review`}
                            from={location.state?.from ?? '/'}>Review</NavLinkComponent>}
       </div>
-
       {<Outlet />}
     </div>
   );
